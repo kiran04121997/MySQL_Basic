@@ -35,24 +35,3 @@ insert into tbl_employee values
 SELECT * FROM tbl_employee;
 
 DROP PROCEDURE spEmp;
-
-# PRACTICE
-Begin
-declare CpuCursor cursor
-for
-select *from [dbo].[employee_payroll]
---open cursor
-open CpuCursor
-
-/* Then, fetch each row from the cursor and print out the employee name and salary :*/
-fetch next from CpuCursor
---close cursor
-close CpuCursor
---Finally, deallocate the cursor to release it.
-deallocate CpuCursor;
-end;
-
-
-
-
-
