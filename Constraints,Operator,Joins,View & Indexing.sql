@@ -283,7 +283,7 @@ CREATE TABLE Personal2 (
     gender varchar(1) NOT NULL,
     city int NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (city) REFERENCES City (cid)  
+    FOREIGN KEY (city) REFERENCES City2 (cid)  
 );
 
 select * from Personal2 where age > (select avg(age) from Personal2 where age>18);
